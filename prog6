@@ -1,0 +1,48 @@
+index.php
+<html>
+<head>
+	
+</head>
+
+<body>
+<?php
+	$res=shell_exec("python PythonServer/states.py");
+	$states=explode("\n",$res);
+	echo"<b>The statement is : $states[4]</b>";
+	echo"<b>The word that ends with xas is : $states[0]</b></p>";
+	echo"<b>The word that begins with k and ends with s is : $states[1]</b>";
+	echo"<b>The word that begins with M and ends with a is : $states[2]</b>";
+	echo"<b>The word that ends with a is : $states[3]</b>";
+?>
+</body>
+</html>
+
+states.py
+import re
+states="Mississippi Alabama Texas Massachusetts Kansas"
+statesArr=states.split()
+stateslist=list()
+
+for val in statesArr:
+	if(re.search('xas$',val)):
+		stateslist.append(val)
+
+
+for val in statesArr:
+	if(re.search('k.*s$',val,re.I)):
+		stateslist.append(val)
+
+
+for val in statesArr:
+	if(re.search('M.*s$',val)):
+		stateslist.append(val)
+
+
+for val in statesArr:
+	if(re.search('a$',val)):
+		stateslist.append(val)
+
+for val in stateslist:
+	print(val)
+
+print(states)
