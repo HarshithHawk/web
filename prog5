@@ -1,0 +1,56 @@
+5.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="5.css"?>
+<!DOCTYPE student[
+        <!ELEMENT student_info (h1,h2+,ad+)>
+        <!ELEMENT ad (label)>
+        <!ELEMENT usn (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT col (#PCDATA)>
+        <!ELEMENT branch (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT label (#PCDATA|usn|name|col|branch|year|email)*>
+        <!ELEMENT h2 (#PCDATA)>
+        <!ELEMENT h1 (#PCDATA)>]>
+
+<student_info>
+    <h1>Student info</h1>
+
+    <h2>student 1</h2>
+    <ad><label>USN :<usn>4sh15cs029</usn></label></ad>
+    <ad><label>NAME :<name>HARSHITH R</name></label></ad>
+    <ad><label>COL :<col/>SDIT</label></ad>
+    <ad><label>BRANCH :<branch>CSE</branch></label></ad>
+    <ad><label>YEAR :<year>2015</year></label></ad>
+    <ad><label>EMAIL :<email>abc@gmail.com</email></label></ad>
+
+    <h2>student 2</h2>
+    <ad><label>USN :<usn>4sh15cs029</usn></label></ad>
+    <ad><label>NAME :<name>HARSHITH R</name></label></ad>
+    <ad><label>COL :<col/>SDIT</label></ad>
+    <ad><label>BRANCH :<branch>CSE</branch></label></ad>
+    <ad><label>YEAR :<year>2015</year></label></ad>
+    <ad><label>EMAIL :<email>abc@gmail.com</email></label></ad>
+
+    <h2>student 3</h2>
+    <ad><label>USN :<usn>4sh15cs029</usn></label></ad>
+    <ad><label>NAME :<name>HARSHITH R</name></label></ad>
+    <ad><label>COL :<col/>SDIT</label></ad>
+    <ad><label>BRANCH :<branch>CSE</branch></label></ad>
+    <ad><label>YEAR :<year>2015</year></label></ad>
+    <ad><label>EMAIL :<email>abc@gmail.com</email></label></ad>
+
+</student_info>
+
+5.css
+h1 {color: red;font-size: 50px;}
+h2 {display:block;margin-left:40px;color: blue;font-size: 30px;}
+ad {display: block;margin-left:80px;margin-top:20px;color: gold;font-size: 20px;}
+
+usn {color: green;margin-left: 20px;font-size: 20px;}
+name {color: green;margin-left: 20px;font-size: 20px;}
+branch {color: green;margin-left: 20px;font-size: 20px;}
+year {color: green;margin-left: 20px;font-size: 20px;}
+col {color: green;margin-left: 20px;font-size: 20px;}
+email {color: green;margin-left: 20px;font-size: 20px;}
